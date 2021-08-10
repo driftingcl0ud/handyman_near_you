@@ -1,0 +1,3 @@
+class HandymenController < ApplicationController
+	
+end
