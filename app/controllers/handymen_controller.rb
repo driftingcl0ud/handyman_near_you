@@ -13,7 +13,7 @@ class HandymenController < ApplicationController
 	end
 
 	def create
-		@
+		
 
 	end
 
