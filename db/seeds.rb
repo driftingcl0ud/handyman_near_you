@@ -14,6 +14,8 @@ users1 = User.create(first_name: 'Kaveesh', last_name: 'Sinopharm', email:'kavee
 users2 = User.create(first_name: 'Priyanka', last_name: 'Kallee', email:'kallee@hotmail.com', password: "123456", address:"Flic en Flac" )
 users3 = User.create(first_name: 'Drifting', last_name: 'Cloud', email:'cloud@yahoo.com', password: "123456", address:"Beau Bassin" )
 
+handymen1 = Handyman.create(job_title: 'Plumber', average_price: '500',availability: true, user_id: users1.id)
+handymen2 = Handyman.create(job_title: 'Electrician', average_price: '250',availability: true, user_id: users2.id)
 
 
 puts "Finished"
