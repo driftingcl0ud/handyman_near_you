@@ -6,6 +6,7 @@ class User < ApplicationRecord
   
   has_many :missions
   has_many :handyman
+
   # validates :first_name,presence: :true
   # validates :last_name, presence: :true
   # validates :address, presence: :true
