@@ -2,6 +2,12 @@
   justify-content: space-between;
   background: white;
 }
+.navbar-home {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;

@@ -5,12 +5,12 @@ class HandymenController < ApplicationController
 	end
 
 	def new
-		@handymen = Handyman.new
-		@missions = Mission.new
+	  @handymen = Handyman.new
+	  @missions = Mission.new
 	end
 
 	def show
-		@handyman = Handyman.find(params[:id])
+	  @handyman = Handyman.find(params[:id])
 	  @quotations = Quotation.new
 	end
 
