@@ -2,6 +2,7 @@ class HandymenController < ApplicationController
 	
 	def index
 		@handymen = Handyman.all
+		
 	end
 
 	def new
