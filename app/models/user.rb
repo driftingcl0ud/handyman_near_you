@@ -5,10 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :missions
-  has_many :handyman
+  has_many :handymen
 
   validates :first_name,presence: :true
   validates :last_name, presence: :true
   validates :address, presence: :true
-
+  has_one_attached :photo
 end
