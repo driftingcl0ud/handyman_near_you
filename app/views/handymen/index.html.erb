@@ -1,3 +1,71 @@
+<div class="container">
+	<div>
+		<h1>LIST OF THE HANDYMEN NEAR YOU</h1>
+<!-- 
+		<div class="handyman">
+			<ul>
+				<% @handymen.each do |handyman| %>
+					<li><%= handyman.user.first_name %> <%= handyman.user.last_name %></li>
+					<li><%= handyman.job_title %></li>
+					<li><%= handyman.average_price %></li>
+					<li><%= handyman.availability %></li>
+			 <%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %>
+			</ul>
+
+        <% end %>
+      
+    </div>
+  </div>
+</div>
+ -->
+ <div class="columns">
+  <ul class="price">
+<!--     <li class="header">Basic</li> -->
+    <li class="grey">First Name + Last Name</li>
+    <li><%= image_tag "mechanic.png", height: "30", width: "30" %>10GB Storage</li>
+    <li><%= image_tag "best-price.png", height: "30", width: "30" %>10 Emails</li>
+    <li>10 Domains</li>
+    <li>1GB Bandwidth</li>
+    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
 
 
-<%= @handymen %>
+
+<%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <div class="cards">
+
+        <% @handymen.each do |handyman| %>
+          <div class="flip-card mb-2">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+              	<p class= "text-blue"><%= image_tag "mechanic.png", height: "30", width: "30" %> <strong>Job Title</strong> <%= handyman.job_title %></p>
+                <p class= "text-blue"><%= image_tag "best-price.png", height: "30", width: "30" %> <strong>Average Price</strong> <%= handyman.average_price %></p>
+                <p class= "text-blue"><%= image_tag "availability.png", height: "30", width: "30" %> <strong>Availability:</strong> <%= handyman.availability %></p>
+              <!--  <%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %>
+            -->
+              <!-- </div>
+              <div class="flip-card-back">
+              	<%= image_tag "lego.png", width:50, class:"handyman" %>
+              	<%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  </div>
+     --> -->
