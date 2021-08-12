@@ -1,19 +1,33 @@
 <div class="container">
 	<div>
 		<h1>LIST OF THE HANDYMEN NEAR YOU</h1>
- <div class="columns">
-  <ul class="price">
-<!--     <li class="header">Basic</li> -->
-		<% @handymen.each do |handyman| %>
-    <li class="grey"><%= handyman.user.first_name %> <%= handyman.user.last_name %></li>
-    <li><%= image_tag "mechanic.png", height: "30", width: "30" %><%= handyman.job_title %></li>
-    <li><%= image_tag "best-price.png", height: "30", width: "30" %><%= handyman.average_price %></li>
-    <li>10 Domains</li>
-    <li>1GB Bandwidth</li>
-    <li class="grey"><%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %></li>
- 		<% end %>
-  </ul>
+
+
+		<div class="columns">
+      <ul class="price">
+    <!--     <li class="header">Basic</li> -->
+        <% @handymen.each do |handyman| %>
+        <li class="grey"><%= handyman.user.first_name %> <%= handyman.user.last_name %></li>
+        <li><%= image_tag "mechanic.png", height: "30", width: "30" %><%= handyman.job_title %></li>
+        <li><%= image_tag "best-price.png", height: "30", width: "30" %><%= handyman.average_price %></li>
+        <li>10 Domains</li>
+        <li>1GB Bandwidth</li>
+        <li class="grey"><%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %></li>
+        <% end %>
+
+        <%= form_tag handymen_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a handyman "
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+      
+    </div>
+  </div>
 </div>
+
 <div class="container">
 <div id="map"
      style="width: 600px; height: 600px;"
