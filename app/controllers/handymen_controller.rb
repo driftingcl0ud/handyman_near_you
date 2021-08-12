@@ -6,12 +6,12 @@ class HandymenController < ApplicationController
 
 	def new
 		@handymen = Handyman.new
+		@missions = Mission.new
 	end
 
 	def show
-		@handymen = Handyman.find(params[:id])
-		@quotation = Quotation.new
-
+		@handyman = Handyman.find(params[:id])
+	  @quotations = Quotation.new
 	end
 
 	def create
@@ -23,11 +23,16 @@ class HandymenController < ApplicationController
 		end
 	end
 
+	def destroy
+		@handymen = Handyman.delete
+	end
+
+
+
 private
-
-
-
-
+def handyman_params
+    params.require(:handyman).permit(:user_id, :average_price, :job_title, :availability)
+end
 
 end
 
