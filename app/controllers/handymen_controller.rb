@@ -2,6 +2,15 @@ class HandymenController < ApplicationController
 	
 	def index
 		@handymen = Handyman.all
+
+		@markers = @handymen.geocoded.map do |handyman|
+      {
+        lat: handyman.latitude,
+        lng: handyman.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { handyman: handyman })
+      }
+    end
+
 	end
 
 	def new
