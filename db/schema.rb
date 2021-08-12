@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_08_12_103619) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,6 +44,9 @@ ActiveRecord::Schema.define(version: 2021_08_12_103619) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["user_id"], name: "index_handymen_on_user_id"
   end
 
