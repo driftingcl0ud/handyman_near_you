@@ -1,5 +1,14 @@
 <div class="container">
     <h1>OUR HANDYMEN NEAR YOU</h1>
+    <%= form_tag handymen_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a handyman "
+          %>
+          <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+          
+        <% end %>
    <div class="columns">
     <ul class="price">
       <% @handymen.each do |handyman| %>
@@ -10,15 +19,7 @@
             <li class="grey"><%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %></li>
          </div>
       <% end %>
-       <%#= form_tag handymen_path, method: :get do %>
-          <%#= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a handyman "
-          %>
-          <%#= submit_tag "Search", class: "btn btn-primary" %>
-          
-        <%# end %>
+       
     </ul>
   </div>
 </div>

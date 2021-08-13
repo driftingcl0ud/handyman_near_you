@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :missions do
     resources :quotations, only: [:create, :new]
   end
-  resources :handymen 
+  resources :handymen
   resources :quotations, only: [:destroy, :edit]
   patch '/quotations/:id/approve', to: 'quotations#approve', as: :approve_quotation
   patch '/quotations/:id/decline', to: 'quotations#decline', as: :decline_quotation
