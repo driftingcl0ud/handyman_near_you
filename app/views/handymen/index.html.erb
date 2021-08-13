@@ -1,7 +1,19 @@
 <div class="container">
-    <div class="title"></div>
+
+
  <h1 class= "title"><%= image_tag "decorator.png", height: "50", width: "50" %>
     OUR HANDYMEN NEAR YOU <%= image_tag "car-service.png", height: "50", width: "50" %> </h1>
+
+    <%= form_tag handymen_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a handyman "
+          %>
+          <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+          
+        <% end %>
+
    <div class="columns">
     <ul class="price">
       <% @handymen.each do |handyman| %>
@@ -12,15 +24,7 @@
             <li class="grey"><%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %></li>
          </div>
       <% end %>
-       <%#= form_tag handymen_path, method: :get do %>
-          <%#= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a handyman "
-          %>
-          <%#= submit_tag "Search", class: "btn btn-primary" %>
-          
-        <%# end %>
+       
     </ul>
   </div>
 </div>

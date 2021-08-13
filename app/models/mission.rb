@@ -4,6 +4,6 @@ class Mission < ApplicationRecord
   has_many :quotations
 
   validates :description, presence: true
-  validates :date, presence: true
+  validates :start_date, presence: true
 
 end

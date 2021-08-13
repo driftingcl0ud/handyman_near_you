@@ -10,6 +10,9 @@
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
+    <% @user.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
 
     <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
@@ -23,6 +26,7 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
   </div>
+
 
   <div class="form-actions">
     <%= f.button :submit, "Update" %>
