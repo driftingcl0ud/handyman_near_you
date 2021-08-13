@@ -1,55 +1,41 @@
 
- 
- 
-<div class="navy container mt-5">
-   <nav class="bg-primaryX text-lightX navbar navbar-expand-xl navbar-dark  navbar-togglable  fixed-top <%= yield(:navbar_class) %>">
+<div class="navy container mt-4 mb-4">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
   <%= link_to "#", class: "navbar-brand" do %>
       <div class="header_logo">
-          <img src="images/logo.jpg" alt="logo" />
+        
         <% end %>  
           </div>
-             <div class="container ">
-              
-                 <a class="navbar-brand" href="index.html">
-                    Handyman
-                    
-                 </a>
-                 <div>
-                   
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon"></span>
-                 </button>
+          <div class="container ">         
+              <a class="navbar-brand" href="index.html">
+                Handyman
+              </a>
+        <div>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
 
-                 <div class="collapse navbar-collapse" id="navbarCollapse">
-
-                     <ul class="navbar-nav ml-auto">
-                       <li class="nav-item active mx-4">
-                         <a class="nav-link" href="#"><%= link_to "propose your services", destroy_user_session_path, method: :delete, class: "nav-link" %></a>
-                       </li>
-                        </li>
-                       <% if user_signed_in? %>
-                       <li class="nav-item mx-4">
-                         <a class="nav-link" href="#"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></a>
-                       </li> 
-                       <li class="nav-item dropdown">
-                        
-                        <%= link_to "Action", "#", class: "dropdown-item" %>
-                        <%= link_to "Another action", "#", class: "dropdown-item" %>
-                        </li>
-                       <%else%>
-                       <li class="nav-item mx-4">
-                         <a class="nav-link" href="#"><%= link_to "Login", new_user_session_path, class: "nav-link" %></a>
-                       </li>
-                       
-                       <li class="nav-item mx-4">
-                         <a class="nav-link" href="#"><%= link_to "Sign up", new_user_registration_path, class: "nav-link" %></a>
-                        <%end%>                                                    
-                     </ul>
-
-
-                 </div> 
-
-             </div> 
-         </nav>
-
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active mx-4">
+                <a class="nav-link" href="#"><%= link_to "propose your services", destroy_user_session_path, method: :delete, class: "nav-link" %></a>
+              </li>
+              </li>
+              <% if user_signed_in? %>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></a>
+              </li> 
+              <%else%>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#"><%= link_to "Login", new_user_session_path, class: "nav-link" %></a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#"><%= link_to "Sign up", new_user_registration_path, class: "nav-link" %></a>
+              <%end%>                                                    
+            </ul>
+            </div> 
+        </div> 
+    </nav>
 </div>
+
