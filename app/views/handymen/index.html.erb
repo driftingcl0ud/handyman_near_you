@@ -1,5 +1,9 @@
 <div class="container">
-    <h1>OUR HANDYMEN NEAR YOU</h1>
+
+
+ <h1 class= "title"><%= image_tag "decorator.png", height: "50", width: "50" %>
+    OUR HANDYMEN NEAR YOU <%= image_tag "car-service.png", height: "50", width: "50" %> </h1>
+
     <%= form_tag handymen_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
@@ -9,6 +13,7 @@
           <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
           
         <% end %>
+
    <div class="columns">
     <ul class="price">
       <% @handymen.each do |handyman| %>
