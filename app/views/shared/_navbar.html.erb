@@ -8,9 +8,12 @@
         <% end %>  
           </div>
           <div class="container ">         
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" >
                 Handyman
               </a>
+              <li class="nav-item mx-4">
+              <a class="nav-link"><%= link_to "Home", root_path%></a>
+              </li>
         <div>  
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,6 +29,12 @@
               <li class="nav-item mx-4">
                 <a class="nav-link" href="#"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></a>
               </li> 
+              <li>
+                <a class="dropdown-trigger" href="#!" data-target="dropdown1">
+                    <i class="valign-wrapper">
+                    <%= image_tag ""%>
+                <i class="material-icons right"></i>
+            </i>      
               <%else%>
               <li class="nav-item mx-4">
                 <a class="nav-link" href="#"><%= link_to "Login", new_user_session_path, class: "nav-link" %></a>
