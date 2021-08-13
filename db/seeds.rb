@@ -19,7 +19,6 @@ users3 = User.create(first_name: 'Drifting', last_name: 'Cloud', email:'cloud@ya
 handymen1 = Handyman.create(job_title: 'Plumber', average_price: '500',availability: true, user_id: users1.id, address: 'RQ2J+9W Quatre Cocos, Mauritius')
 handymen2 = Handyman.create(job_title: 'Electrician', average_price: '250',availability: true, user_id: users2.id, address: '21 Mère Barthélemy St, Port Louis, Mauritius')
 handymen3 = Handyman.create(job_title: 'Gardener', average_price: '250',availability: true, user_id: users3.id, address: '21 Mère Barthélemy St, Port Louis, Mauritius')
-# handymen4 = Handyman.create(job_title: 'Macon', average_price: '250',availability: true, user_id: users4.id, address: '21 Mère Barthélemy St, Port Louis, Mauritius')
 
 
 

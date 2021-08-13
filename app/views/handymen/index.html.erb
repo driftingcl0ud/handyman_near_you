@@ -1,5 +1,7 @@
 <div class="container">
-    <h1>OUR HANDYMEN NEAR YOU</h1>
+    <div class="title"></div>
+ <h1 class= "title"><%= image_tag "decorator.png", height: "50", width: "50" %>
+    OUR HANDYMEN NEAR YOU <%= image_tag "car-service.png", height: "50", width: "50" %> </h1>
    <div class="columns">
     <ul class="price">
       <% @handymen.each do |handyman| %>
