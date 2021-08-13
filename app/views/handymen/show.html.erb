@@ -1,35 +1,24 @@
-<div class="card">
-	<div class="image">
-		<%= image_tag "lego.png" %>
+<div class="container">
+	<div id="profile-id">
+	  <div class="profile-img"></div>
+	  <h2 class="name"><%= @handyman.user.first_name %> <%= @handyman.user.last_name %></h2>
+	  <div class="description">
+	  	<h3><%= @handyman.job_title %> </h3>
+	    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat esse aliquid sit voluptates perferendis iure reiciendis labore voluptatum est. Laudantium fugit accusantium voluptates, ipsa ut commodi ea maiores illo alias.
+	  </div>
+	  <div class="region">
+	    <a>Port-Louis</a>
+	    <a>Beau Bassin</a>
+	    <a>Rose-Hill</a>
+	  </div>
+	  <%= link_to "Create a Mission", new_mission_path,class:'btn btn-success' %>
+	  <footer>
+	    <div class="likes">
+	      <p>Rating: 1.5K <p><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></p></p>
+	    </div>
+	    <div class="Mission">
+	      <p>Mission: 154</p>
+	    </div>
+	  </footer>
 	</div>
-
-	<div class="details">
-		<h2 class="name"><%= @handyman.user.first_name %> <%= @handyman.user.last_name %></h2>
-		<p class=text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis molestiae sint nihil quas vero consequuntur autem et earum, exercitationem iure itaque ipsa provident fugit ipsum cum sit perspiciatis inventore magni.</p>
-		<div class="icons">
-			
-		</div>
-	
-<div class="project">
-	
-	
 </div>
-
-	</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-	<%= link_to "Create a Mission", new_mission_path,class:'btn btn-success' %>
-
-
-
-</div>
-
