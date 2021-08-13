@@ -1,8 +1,12 @@
 class HandymenController < ApplicationController
 	
 	def index
-		@handymen = Handyman.all
-
+		if params[:query].present?
+			sql_query = "job_title ILIKE :query"
+			@handymen = Handyman.where(sql_query, query: "%#{params[:query]}%")
+		else
+			@handymen = Handyman.all
+		end
 		@markers = @handymen.geocoded.map do |handyman|
       {
         lat: handyman.latitude,
@@ -14,12 +18,12 @@ class HandymenController < ApplicationController
 	end
 
 	def new
-		@handymen = Handyman.new
-		@missions = Mission.new
+	  @handymen = Handyman.new
+	  @missions = Mission.new
 	end
 
 	def show
-		@handyman = Handyman.find(params[:id])
+	  @handyman = Handyman.find(params[:id])
 	  @quotations = Quotation.new
 	end
 
