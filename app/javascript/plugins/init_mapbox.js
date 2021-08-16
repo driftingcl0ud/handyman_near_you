@@ -28,8 +28,8 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
-  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+  bounds.extend([ 57.6755, -20.20665]);
+  map.fitBounds(bounds, { maxZoom: 9});
 };
 
 export { initMapbox };

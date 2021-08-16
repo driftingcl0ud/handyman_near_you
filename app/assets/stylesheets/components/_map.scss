@@ -7,6 +7,11 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-// .map {
-//   position: sticky;
-// }
+#map {
+  height: 100vh;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 50%;
+
+}

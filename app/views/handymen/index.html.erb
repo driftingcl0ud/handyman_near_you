@@ -1,8 +1,7 @@
-<div class="container">
-    <div class="title"></div>
+<div class="">
  <h1 class= "title"><%= image_tag "decorator.png", height: "50", width: "50" %>
     OUR HANDYMEN NEAR YOU <%= image_tag "car-service.png", height: "50", width: "50" %> </h1>
-    <p>You can fin a handyman in your local area who can help you to fix things around your house!</p>
+  <!--   <p class="little-title">You can fin a handyman in your local area <br> who can help you to fix things around your house!</p> -->
    <div class="columns">
     <ul class="price">
       <% @handymen.each do |handyman| %>
@@ -25,10 +24,8 @@
     </ul>
   </div>
 </div>
-<div class="container">
   <div id="map"
-       style="width: 600px; height: 600px;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="pk.eyJ1Ijoia2F2ZWVzaCIsImEiOiJja3Jlazd0c3kxc205MnZxdTd0N2twOXAwIn0.My3-kyt0F3aF2jkksJkxCw">
   </div>
-</div>
+
