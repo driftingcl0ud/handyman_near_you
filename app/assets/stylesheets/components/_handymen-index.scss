@@ -1,6 +1,7 @@
 .title {
-  text-align: center;
+  text-align: left;
   color: #FFB740;
+  margin: 30px;
 }
 
 .price .map {
@@ -8,6 +9,6 @@
   justify-content: center
 }
 
-// .container-handyman {
-//   background-color: ;
-// }
+.price {
+  margin-left: 50px;
+}
