@@ -1,6 +1,15 @@
 <%= content_for(:navbar_class, "navbar-home") %>
 
-
+<%= form_tag handymen_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "wrap",
+          class: "searchBox", type: "text",
+          placeholder: "Find a handyman "
+        %>
+        <%= submit_tag "Search", class: "searchButton" %>
+        
+      <% end %>
 <div class="banner">
     <div class="container text-center">
         <div class="banner-content ">
