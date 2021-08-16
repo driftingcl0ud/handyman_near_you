@@ -6,7 +6,6 @@ class MissionsController < ApplicationController
 
 	def new
     @missions = Mission.new
-    @quotations = Quotation.new
   end
 
 
