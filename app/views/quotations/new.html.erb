@@ -1,1 +1,33 @@
+<div class="container">
+
 <h2>create your quotations</h2>
+<div class="container">
+<form>
+  <div class="form-group">
+    <input type="email" class="form-control" id="locationInput" aria-describedby="locationInputHelp" placeholder="Anywhere">
+    <small id="locationInputHelp" class="form-text text-muted sr-only">Please type in your desired destination.</small>
+  </div>  
+</form>
+        Start Date: <input id="startDate" width="276" />
+        End Date: <input id="endDate" width="276" />
+    </div>
+    <script>
+        var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+        $('#startDate').datepicker({
+            uiLibrary: 'bootstrap4',
+            iconsLibrary: 'fontawesome',
+            minDate: today,
+            maxDate: function () {
+                return $('#endDate').val();
+            }
+        });
+        $('#endDate').datepicker({
+            uiLibrary: 'bootstrap4',
+            iconsLibrary: 'fontawesome',
+            minDate: function () {
+                return $('#startDate').val();
+            }
+        });
+    </script>
+</div>
+</div>
