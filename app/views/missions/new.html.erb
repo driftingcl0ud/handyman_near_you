@@ -1,56 +1,28 @@
+
 <div class="container">
-	<h2>Describe your mission</h2>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-4">
+      <h2 class="mission-title"><%= image_tag "description.png", height: "30", width: "30" %>Describe your mission</h2>
 
-<form>
-  <div class="form-group">
-   <div class="form-row">
-    <!-- <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <div class="form-inputs label-none">
+
+        <%= simple_form_for(@missions) do |f| %>
+        <p class="starting-date">
+          Please put your starting date
+        </p>
+          <%= f.input :start_date %>
+          <p class="description">
+            Please describe your mission so we can help you more:
+          </p>
+          <%= f.text_area :description, cols: 20, rows: 20 %>
+
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= link_to "Back to handymen list", handymen_path,class:'btn btn-light' %>
+          <%= f.submit "Request to the quotation",class:'btn btn-primary' %>
+        <% end %>
+      </div>
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
-    </div> -->
   </div>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">How can I help you?</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>Reparation</option>
-      <option>Fixation</option>
-      <option>Advice</option>
-      <option>Help</option>
-      <option>Others</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">When would you be free for our mission?</label>
-    <select class="form-control" id="exampleFormControlSelect2">
-      <option>Monday to Friday Morning between 9hr-12hr</option>
-      <option>Monday to Friday Afernoon between 13hr-15hr</option>
-      <option>Monday to Friday Late afternoon between 15hr-18hr</option>
-      <option>Saturday Morning between 9hr-12hr</option>
-      <option>Saturday Morning Afernoon between 13hr-15hr</option>
-      <option>Saturday Morning Late Afternoon between 15hr-18hr</option>
-      <option>Sunday and Public holiday Morning between 9hr-12hr</option>
-      <option>Sunday and Public holiday Afernoon between 13hr-15hr</option>
-      <option>Sunday and Public holiday Late Afternoon between 15hr-18hr</option>
-      <option>Evening after 18hr</option>
-      
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Can you please explain your issue so we can serve you in a better way:</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-  </div>
-</form>
-
-
-	
-<%= link_to "Back to handymen list", handymen_path,class:'btn btn-light' %>
-<%= link_to "Proceed to the Booking", handymen_path,class:'btn btn-primary' %>
-
 </div>
-
-
 
 
