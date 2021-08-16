@@ -19,20 +19,18 @@ class MissionsController < ApplicationController
 	end
 
 
-	def  
-		
-	end
+	
 
 private
   def mission_params
-    params.require(:mission).permit(:first_name, :last_name, :address)
+    params.require(:mission).permit( :description, :start_date)
   end
 end
 
 
 
     
-end
+
 
 
  
