@@ -3,13 +3,15 @@
  <h1 class= "title"><%= image_tag "decorator.png", height: "50", width: "50" %>
     OUR HANDYMEN NEAR YOU <%= image_tag "car-service.png", height: "50", width: "50" %> </h1>
     <p>You can fin a handyman in your local area who can help you to fix things around your house!</p>
+    
     <%= form_tag handymen_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
+          class: "wrap",
+          class: "searchBox", type: "text",
           placeholder: "Find a handyman "
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= submit_tag "Search", class: "searchButton" %>
         
       <% end %>
    <div class="columns">
