@@ -1,5 +1,4 @@
 class Mission < ApplicationRecord
-  belongs_to :handyman
   belongs_to :user
   has_many :quotations
 
