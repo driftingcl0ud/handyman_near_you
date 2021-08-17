@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard_handyman
+    raise
     @handyman = current_user
   end
 
