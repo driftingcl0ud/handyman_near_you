@@ -3,7 +3,7 @@ class MissionsController < ApplicationController
 	def index
 		@user = current_user
 		@mission_user = Mission.where(user_id: @user.id)
-		if @user.handymen.?
+		if @user.handymen?
 		@mission_handyman = Mission.where(handyman_id: @user.handyman.id)
 		end
 	end
@@ -16,11 +16,13 @@ class MissionsController < ApplicationController
 
 	def create 
 		@mission = Mission.new(mission_params)
+		@mission.user = current_user
+		@mission.handyman_id = Handyman.find(params[:handyman_id])
 
     if @mission.save!
-    	redirect_to dashboad_path
+    	redirect_to dashboard_path
     else
-    	render "new"
+    	redirect_to handyman_path(@handyman)
     end
 	end
 
@@ -31,7 +33,7 @@ class MissionsController < ApplicationController
 	
 private
   def mission_params
-    params.require(:mission).permit( :description, :start_date)
+    params.require(:mission).permit( :description, :start_date, :handyman_id, :user_id)
   end
 end
 
