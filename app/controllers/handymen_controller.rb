@@ -23,7 +23,7 @@ class HandymenController < ApplicationController
 	end
 
 	def show
-	  @handyman = Handyman.find(params[:id])
+	  @handymen = Handyman.find(params[:id])
 	  @quotations = Quotation.new
 	end
 

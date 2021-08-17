@@ -3,12 +3,12 @@ class QuotationsController < ApplicationController
 		@quotations = Quotation.all
 	end
 
-  def create
+  def create 
     @mission = Mission.find(params[:mission_id])
     @quotation = Quotation.new(quotation_params)
     @mission.quotations << @quotation
     @mission.save
-    redirect_to mission_path
+    redirect_to mission_path(@mission)
   end
 
   def new 

@@ -3,7 +3,7 @@ class MissionsController < ApplicationController
 	def index
 		@user = current_user
 		@mission_user = Mission.where(user_id: @user.id)
-		if @user.handymen.?
+		if @user.handymen?
 		@mission_handyman = Mission.where(handyman_id: @user.handyman.id)
 		end
 	end
