@@ -9,14 +9,16 @@ class MissionsController < ApplicationController
 	end
 
 	def new
-    @missions = Mission.new
-  	end
+    @mission = Mission.new
+  end
+
 
 
 	def create 
 		@mission = Mission.new(mission_params)
-    if @mission.save
-    	redirect_to dashboard_path
+
+    if @mission.save!
+    	redirect_to dashboad_path
     else
     	render "new"
     end
