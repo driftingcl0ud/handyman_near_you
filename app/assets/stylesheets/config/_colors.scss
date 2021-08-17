@@ -4,7 +4,7 @@
 $red: #FD1015;
 $blue: #167FFB;
 $yellow: #FFC65A;
-$orange: #E67E22;
+$orange: #EA7000;
 $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
@@ -12,3 +12,24 @@ $background: #fffffb;
 $accent: #ff6b6c;
 $otherAccent: #ffc145;
 $darkBackground: #5b5f97;
+
+
+.orange {
+	color: #EA7000;
+}
+
+.grey {
+	color: #717171;
+}
+
+.bg-orange {
+	background: #EA7000 !important;
+	color: white !important;
+}
+
+.bg-grey {
+	background: #ECECEC;
+	border-radius: 4px;
+	border: 1px solid #EA7000;
+	padding: 40px;
+}

@@ -20,7 +20,7 @@ class MissionsController < ApplicationController
 		@mission.handyman_id = Handyman.find(params[:handyman_id])
 
     if @mission.save!
-    	redirect_to dashboard_path
+    	redirect_to dashboard_user_path
     else
     	redirect_to handyman_path(@handyman)
     end

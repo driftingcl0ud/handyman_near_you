@@ -23,7 +23,7 @@ class HandymenController < ApplicationController
 	end
 
 	def show
-	  @handymen = Handyman.find(params[:id])
+	  @handyman = Handyman.find(params[:id])
 	  @quotations = Quotation.new
 	end
 
@@ -31,7 +31,7 @@ class HandymenController < ApplicationController
 		@handyman = Handyman.new(handyman_params)
 		@handyman.user = current_user
 		if @handyman.save!
-			redirect_to dashboard_path(@handyman)
+			redirect_to dashboard_handyman_path
 		else
 			render "new"
 		end
