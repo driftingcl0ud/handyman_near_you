@@ -5,7 +5,6 @@ class Handyman < ApplicationRecord
 	has_many :quotation
   belongs_to :user
   validates :job_title, presence: :true
-  validates :average_price, presence: :true
   include PgSearch::Model
   pg_search_scope :search_by_first_name_and_job_title,
     against: [ :first_name, :job_title ],
