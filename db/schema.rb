@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_12_103619) do
+ActiveRecord::Schema.define(version: 2021_08_17_070249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2021_08_12_103619) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "handyman_id"
+    t.index ["handyman_id"], name: "index_missions_on_handyman_id"
     t.index ["user_id"], name: "index_missions_on_user_id"
   end
 
@@ -86,6 +88,7 @@ ActiveRecord::Schema.define(version: 2021_08_12_103619) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "missions", "handymen"
   add_foreign_key "missions", "users"
   add_foreign_key "quotations", "handymen"
   add_foreign_key "quotations", "missions"

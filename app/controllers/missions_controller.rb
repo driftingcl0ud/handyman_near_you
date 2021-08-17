@@ -9,16 +9,20 @@ class MissionsController < ApplicationController
 	end
 
 	def new
-    @missions = Mission.new
-  	end
+    @mission = Mission.new
+  end
+
 
 
 	def create 
 		@mission = Mission.new(mission_params)
-    if @mission.save
+		@mission.user = current_user
+		@mission.handyman_id = Handyman.find(params[:handyman_id])
+
+    if @mission.save!
     	redirect_to dashboard_path
     else
-    	render "new"
+    	redirect_to handyman_path(@handyman)
     end
 	end
 
@@ -29,7 +33,7 @@ class MissionsController < ApplicationController
 	
 private
   def mission_params
-    params.require(:mission).permit( :description, :start_date)
+    params.require(:mission).permit( :description, :start_date, :handyman_id, :user_id)
   end
 end
 

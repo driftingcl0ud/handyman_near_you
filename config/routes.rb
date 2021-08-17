@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   
   get 'dashboard_user', to: 'pages#dashboard_user', as: :dashboard_user#dashboard_path
   get 'dashboard_handyman', to: 'pages#dashboard_handyman', as: :dashboard_handyman
-  resources :missions do
+  resources :missions, only: [:index, :destroy, :update, :edit] do
+
     resources :quotations, only: [:create, :new]
   end
-  resources :handymen
+  resources :handymen do 
+    resources :missions, only: [:new, :create]
+  end
   resources :quotations, only: [:destroy, :edit]
   patch '/quotations/:id/approve', to: 'quotations#approve', as: :approve_quotation
   patch '/quotations/:id/decline', to: 'quotations#decline', as: :decline_quotation
