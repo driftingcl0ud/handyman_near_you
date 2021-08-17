@@ -11,10 +11,11 @@
             Your job title
           </p>
           <%= f.input :job_title, placeholder: "Electrian" %>
-
-
-          <p class="address">Insert your address:</p>
+          	<p class="address">Insert your address:</p>
           <%= f.input :address, placeholder: "21 rue de Labourdonnais, Port Louis Mauritius" %>
+          	<p class="address">Insert photos of your work:</p>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
 
 
 

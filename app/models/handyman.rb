@@ -3,6 +3,7 @@ class Handyman < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 	has_many :missions
 	has_many :quotation
+  has_many_attached :photos
   belongs_to :user
   validates :job_title, presence: :true
   include PgSearch::Model
