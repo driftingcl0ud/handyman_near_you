@@ -23,16 +23,15 @@ handymen6 = Handyman.create(job_title: 'Electrician', average_price: '530',avail
 handymen7 = Handyman.create(job_title: 'Macon', average_price: '6000',availability: true, user_id: users3.id, address: '53 Avenue Panchoo, Trefles,Rose Hill, Mauritius')
 handymen8 = Handyman.create(job_title: 'Electrician', average_price: '10',availability: true, user_id: users2.id, address: '226 Royal Road, Beau Bassin, Mauritius')
  
-
-missions1 = Mission.new(start_date: Date.new(2009,9,14), user_id: users2.id, description: 'To fix my running tab')
+missions1 = Mission.new(start_date: Date.new(2009,9,14), user_id: users2.id, description: 'To fix my running tab', handyman_id: handymen1.id)
 missions1.save!
-missions2 = Mission.new(start_date: Date.new(2009,9,14), user_id: users1.id, description: 'To fix a bulb')
+missions2 = Mission.new(start_date: Date.new(2009,9,14), user_id: users1.id, description: 'To fix a bulb', handyman_id: handymen2.id)
 missions2.save!
-missions3 = Mission.new(start_date: Date.new(2009,9,14), user_id: users3.id, description: 'To change my tv cable')
+missions3 = Mission.new(start_date: Date.new(2009,9,14), user_id: users3.id, description: 'To change my tv cable', handyman_id: handymen3.id)
 missions3.save!
-missions4 = Mission.new(start_date: Date.new(2009,9,14), user_id: users1.id, description: 'To make some holes in my room')
+missions4 = Mission.new(start_date: Date.new(2009,9,14), user_id: users1.id, description: 'To make some holes in my room', handyman_id: handymen4.id)
 missions4.save!
-missions5 = Mission.new(start_date: Date.new(2009,9,14), user_id: users2.id, description: 'To regulerate my shower')
+missions5 = Mission.new(start_date: Date.new(2009,9,14), user_id: users2.id, description: 'To regulerate my shower', handyman_id: handymen5.id)
 missions5.save!
 
 
