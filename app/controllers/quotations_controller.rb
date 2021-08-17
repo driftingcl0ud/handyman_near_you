@@ -15,9 +15,17 @@ class QuotationsController < ApplicationController
     @mission = Mission.find(params[:mission_id])
     @quotation = Quotation.new
   end
-  
+
+  def destroy
+    @quotation = Quotation.find(params[:id])
+    @quotation.delete
+  end
+
+  def approve
+    @quotation = Quotation.find(params[:id])
+  end
   private
   def quotation_params
-    params.require(:quotation).permit(:first_name, :last_name, :address)
+    params.require(:quotation).permit(:specific_price, :handyman_description)
   end
 end

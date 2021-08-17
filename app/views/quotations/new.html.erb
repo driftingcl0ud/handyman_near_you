@@ -2,32 +2,26 @@
 
 <h2>create your quotations</h2>
 <div class="container">
-<form>
-  <div class="form-group">
-    <input type="email" class="form-control" id="locationInput" aria-describedby="locationInputHelp" placeholder="Anywhere">
-    <small id="locationInputHelp" class="form-text text-muted sr-only">Please type in your desired destination.</small>
-  </div>  
-</form>
-        Start Date: <input id="startDate" width="276" />
-        End Date: <input id="endDate" width="276" />
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-4">
+      <h2 class="quotation-title"><%= image_tag "description.png", height: "30", width: "30" %>Create your quotation</h2>
+
+      <div class="form-inputs label-none">
+
+        <%= simple_form_for [@mission, @quotation] do |f| %>
+        <p class="specific_price">
+          Please put your price
+        </p>
+        <%= f.input :specific_price %>
+          <p class="handyman_description">
+            Please describe your quotation:
+          </p>
+          <%= f.text_area :handyman_description, cols: 20, rows: 20 %>
+          <%= link_to "Back to dashboard", dashboard_path,class:'btn btn-light' %>
+          <%= f.submit "Send quotation", class:'btn btn-primary' %>
+        <% end %>
+      </div>
     </div>
-    <script>
-        var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        $('#startDate').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: today,
-            maxDate: function () {
-                return $('#endDate').val();
-            }
-        });
-        $('#endDate').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: function () {
-                return $('#startDate').val();
-            }
-        });
-    </script>
+  </div>
 </div>
 </div>

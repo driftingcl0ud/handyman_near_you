@@ -1,26 +1,32 @@
 class MissionsController < ApplicationController
 
 	def index
-		@missions = Mission.all
+		@user = current_user
+		@mission_user = Mission.where(user_id: @user.id)
+		if @user.handymen.?
+		@mission_handyman = Mission.where(handyman_id: @user.handyman.id)
+		end
 	end
 
 	def new
     @missions = Mission.new
-  end
+  	end
 
 
 	def create 
-		@mission = Mission.new(mission)
+		@mission = Mission.new(mission_params)
     if @mission.save
-    	redirect_to @mission
+    	redirect_to dashboard_path
     else
     	render "new"
     end
 	end
 
-
+	def destroy
+		@mission = Mission.find(params[:id])
+		@mission.delete
+	end
 	
-
 private
   def mission_params
     params.require(:mission).permit( :description, :start_date)
