@@ -18,7 +18,7 @@ class HandymenController < ApplicationController
 	end
 
 	def new
-	  @handymen = Handyman.new
+	  @handyman = Handyman.new
 	  @missions = Mission.new
 	end
 
@@ -28,9 +28,10 @@ class HandymenController < ApplicationController
 	end
 
 	def create
-		@handymen = Handyman.new(handyman_params)
-		if @handyman.save
-			redirect_to handyman_path(@handyman)
+		@handyman = Handyman.new(handyman_params)
+		@handyman.user = current_user
+		if @handyman.save!
+			redirect_to dashboard_path(@handyman)
 		else
 			render "new"
 		end
@@ -44,7 +45,7 @@ class HandymenController < ApplicationController
 
 private
 def handyman_params
-    params.require(:handyman).permit(:user_id, :average_price, :job_title, :availability)
+    params.require(:handyman).permit(:user_id, :average_price, :job_title, :availability, :address, photos:[])
 end
 
 end

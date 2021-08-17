@@ -33,7 +33,7 @@ class MissionsController < ApplicationController
 	
 private
   def mission_params
-    params.require(:mission).permit( :description, :start_date, :handyman_id, :user_id)
+    params.require(:mission).permit( :description, :start_date, :handyman_id, :user_id, photos:[])
   end
 end
 
