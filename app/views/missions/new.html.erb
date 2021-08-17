@@ -18,8 +18,8 @@
           <%= f.text_area :description, cols: 20, rows: 20 %>
 
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.submit "Request to the quotation",dashboard_path, class:'btn btn-primary' %>
           <%= link_to "Back to handymen list", handymen_path,class:'btn btn-light' %>
-          <%= f.submit "Request to the quotation",class:'btn btn-primary' %>
         <% end %>
       </div>
     </div>
@@ -27,3 +27,4 @@
 </div>
 
 
+<!--  dashboard GET    /dashboard(.:format)                                                                     pages#dashboard -->
