@@ -12,11 +12,16 @@
       <%# end %>
 
 <div class="container">
-    <h1 class="tagline"> What can our home<br><span class=orange>improvement<br> professionals</span> do<br> for you ? </h1>
-    <div class="bg-grey">
-        <%= link_to "I'M LOOKING FOR HANDYMAN 💪", handymen_path, class: "btn-orange btn-lg"  %>
-        <p class="grey">i - Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Velit assumenda distinction</p>
-    </div>        
+    <div class="d-flex">
+        <div>
+            <h1 class="tagline"> What can our home<br><span class=orange>improvement<br> professionals</span> do<br> for you ? </h1>
+        <div class="bg-grey">
+            <%= link_to "I'M LOOKING FOR HANDYMAN 💪", handymen_path, class: "btn-orange btn-lg"  %>
+            <p class="grey"> ℹ️ Handyman near you is a Mauritian platform, your data are safe. It won't be share to a third party.</p>
+        </div>
+        </div>
+         <%= image_tag "Group 6.png", width: 262 %> 
+    </div>      
     <div class="m-5">
         <h3>A TAILORMAIDE SERVICE</h3>
         <div class="card-container">
@@ -44,22 +49,25 @@
     </div>
     <div>
         <div class="card-container">
-            <h3>They trust qn <br>hqndy man 🤜🤛</h3>
+            <h3><strong> THEY <span class=orange>TRUST</span> AN <br>HANDYMAN 🤜🤛</strong></h3>
             <div class="testimonials">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Tempora iste eaque quam quisquam, perspiciatis aperiam? Voluptas esse impedit distinctio exercitationem? Ipsum fuga maxime vitae nostrum possimus dolorem tempora aut cupiditate.</p>
+                <p> <i> “I WORKED WITH GAEL, A WONDERFUL HANDY MAN, HE BUILT MY BATHROOM, NOW I HAVE A SHOWER,SO COOL”  - BASILE </i> </p> <span class=orange>★★★★★</span>
             </div>
             <div class="testimonials">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Tempora iste eaque quam quisquam, perspiciatis aperiam? Voluptas esse impedit distinctio exercitationem? Ipsum fuga maxime vitae nostrum possimus dolorem tempora aut cupiditate.</p>
+                <p> <i>  "AMAZING PLATEFORM WHERE I CAN SEE ALL THE HANDYMEN NEAR ME! I CAN CREATE MY MISSION AND GET THE QUOTATION IN THE SAME TIME”  - BASILE</i></p> <span class=orange>★★★★★☆</span>
             </div>
         </div>
     </div>
     <div class="bg-orange p-5 d-flex">
         <div>
-            <h3>You are an handy Man</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus blanditiis distinctio ea eos iste quod culpa vero, voluptas assumenda unde. Natus exercitationem corporis.</p>
-            <%= link_to "propose my services", handymen_path, class: "btn-grey btn-lg"  %>
+            <h3>YOU ARE AN <br>HANDYMAN?</h3>
+            <p>EARN MONEY BY PROPOSING YOUR <br>SERVICES ON HANDY MAN NEAR YOU </p>
+            <%= link_to "propose my services", new_handyman_path, class: "btn-grey btn-lg"  %>
         </div>
-        <img src="" alt="#">
+        <div class="banner-bottom">
+            <%= image_tag "handyman-01.jpg", width: 262 %>
+        </div>
+       <!--  <img src=" ⁨app⁩/assets⁩/images⁩/handyman-01.jpg" alt="#"> -->
     </div>
 </div>
 
