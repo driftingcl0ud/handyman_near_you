@@ -19,12 +19,10 @@ class HandymenController < ApplicationController
 
 	def new
 	  @handyman = Handyman.new
-	  @missions = Mission.new
 	end
 
 	def show
 	  @handyman = Handyman.find(params[:id])
-	  @quotations = Quotation.new
 	end
 
 	def create

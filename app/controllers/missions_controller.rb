@@ -17,7 +17,8 @@ class MissionsController < ApplicationController
 	def create 
 		@mission = Mission.new(mission_params)
 		@mission.user = current_user
-		@mission.handyman_id = Handyman.find(params[:handyman_id])
+		@handyman = Handyman.find(params[:handyman_id])
+		@mission.handyman_id = @handyman.id
 
     if @mission.save!
     	redirect_to dashboard_user_path
