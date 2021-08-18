@@ -71,14 +71,27 @@
     }
   }
 
+#box-home {
+  width: 80%;
+}
 
 
-// .banner-bottom {
-//   img{
-//     justify-content: space-evenly;
-//     align-items: center;
-//   }
-// }
+#img-home-1 {
+  width: 262;
+  object-fit: cover;
+}
+
+#bottom-box img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+#bottom-box {
+  margin-top: 24px;
+}
 
   body {
     font-family: 'Roboto', Arial, sans-serif;
