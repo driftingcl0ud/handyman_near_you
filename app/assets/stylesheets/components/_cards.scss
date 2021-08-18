@@ -1,3 +1,4 @@
+
   .card .card_image {
     max-width:100%;
     width: 30px!important;
@@ -8,11 +9,10 @@
   }
   .cards-list {
     z-index: 0;
+
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 300px;
+    border: rgb(247, 149, 64);
+
   }
   
   .card .card_title {
@@ -29,3 +29,37 @@
     font-size: 30px;
     background-color: rgb(255, 180, 113);
  }
+ .card-quotation{
+  border: 1px solid orange;
+  padding: 30px;
+  margin-bottom: 10px;
+  
+}
+.card-img_text {
+  margin: 20px;
+  justify-content: space-between;
+  display: flex;
+}
+.card-quotation-information {
+  display:flex;
+  padding: 20px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  display: flex;
+
+}
+.card-mission-user-button {
+  flex-direction: column;
+  display: flex;
+}
+.card-list-dashboard {
+  padding: 50px;
+  
+}
+.card_img {
+  padding: 20px;
+  display: flex;
+}
+.card {
+  padding: 50px;
+}
