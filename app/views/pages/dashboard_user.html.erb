@@ -1,31 +1,47 @@
 <div class="container">
-<h1>Dashboard of <%= @user.first_name %> </h1>
+  <h1>Dashboard of <%= @user.first_name %> </h1>
     <div class = "row">
      <div class="col-sm-6">
       <div class="card border-warning mb-3" style="width: 15rem;height: 13rem;">
         <div class="card-body">
-     <h4><strong><%= @user.missions.count %><strong></h4>  
-    </div>
-        <p>Mission Envoyees</p>
-    </div>
-    </div>
+        <h4><strong><%= @user.missions.count %><strong></h4>  
+          </div>
+              <p>Mission Envoyees</p>
+          </div>
+        </div>
       </div>
+    </div>
       <div class="container">
         <h2><strong>Upcoming Quotation<strong></h2>
       </div>
-    <div class="card border-warning mb-3">
-    <% @user.missions.each do |mission| %>
+    <div class="card-list-dashboard">
+      <% @user.missions.each do |mission| %>            
         <% mission.quotations.each do |quotation| %>
-            <div class="card-quotation-user-dashboard">
-                <p>Mission <%= mission.description %></p>
-                <p> Specific price: Rs<%= quotation.specific_price %> </p>
-                <p> Description: <%= quotation.handyman_description%> </p>
-                <p> Handyman name: <%= quotation.handyman.user.first_name %> <%= quotation.handyman.user.last_name %> </p>
-            </div>
-        <% end %>
-         <%= link_to "Decline", class:'btn btn-primary' %>
-        <%= link_to "Accept", class:'btn btn-primary' %>
-    <% end %>    
+          <div class="card-quotation">
+            <div class="card_img">
+              <div class="card-img_text">
+                <% if mission.photos.first %>
+                  <%= cl_image_tag mission.photos.first.key, height: 300, width: 400, crop: :fill %>
+                <% end %>
+                </div> 
+                <p>Lorem ipsum description de la mission, truncate 3 ligne </p>    
+              </div>    
+            <div class="card-quotation-information ">     
+                  <div class="card-quotation-user-dashboard">
+                    <p> Handyman name: <%= quotation.handyman.user.first_name %> <%= quotation.handyman.user.last_name %> </p>  
+                    <p> Description: <%= quotation.handyman_description%> </p>
+                    <p>Mission <%= mission.description %></p>
+                    <p> Price: Rs<%= quotation.specific_price %> </p>      
+                  </div>                  
+                    <div class="card-mission-user-button">
+                      <%= link_to "Accept", "#", class:'btn btn-orange m-4' %>
+                      <%= link_to "Decline", "#",class:'btn btn-grey m-4' %>
+                    </div>  
+                </div>
+            </div>        
+        <% end %> 
+      <% end %>  
+    </div>            
 </div>
 
 
