@@ -2,14 +2,14 @@
 <div class="container">
   <div class = "d-flex justify-content-between">
     <h1><%= @handyman.user.first_name %> DashBoard</h1>
-    <%= image_tag "icons.png", height: "70", width: "60"%>
+    <%= image_tag "icons.png", height: "136", width: "123"%>
   </div>
     
     <div class = "row">
      <div class="col-sm-6">
       <div class="card border-warning mb-3" style="width: 15rem;height: 13rem;">
         <div class="card-body">
-          <h5><strong>110</strong></h5>
+          <h5><strong><span class = "orange">110</span></strong></h5>
           <p>Missions accomplished</p>
         </div>
       </div>
@@ -19,13 +19,13 @@
      <div class="col-sm-6">
       <div class="card border-warning mb-3" style="width: 15rem;height: 13rem;">
         <div class="card-body">
-          <h5><strong>4.5/5</strong></h5>
+          <h5><strong><span class = "orange">4.5/5</span></strong></h5>
           <p>Ratings</p>
         </div>
       </div>
      </div>
     </div>
-                <h2><strong>Upcoming Missions </strong></h2>
+                <h2><strong>Upcoming <span class = "orange"> Missions </span></strong></h2>
                 <% @handyman.missions.each do |mission| %>
                 <div class="card-mission-handyman ">
                   <div class="card-mission-handyman-infos">
@@ -34,8 +34,8 @@
                     <h4> <%= mission.user.address %></h4>
                   </div>
                     <div class="card-mission-handyman-button">
-                       <%= link_to "Approve", "#", class:'btn btn-primary' %>
-                       <%= link_to "Decline", "#", class:'btn btn-primary' %>
+                       <%= link_to "Approuve", new_mission_quotation_path(mission), class:'btn btn-orange m-4' %>
+                       <%= link_to "Decline", quotation_path(mission),class:'btn btn-grey m-4' %>
                     </div>
 
                   
