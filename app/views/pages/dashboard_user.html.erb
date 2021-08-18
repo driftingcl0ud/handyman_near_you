@@ -13,18 +13,20 @@
       <div class="container">
         <h2><strong>Upcoming Quotation<strong></h2>
       </div>
-    <div class="card border-warning mb-3">
+    <div class="card-quotation border-warning mb-3">
     <% @user.missions.each do |mission| %>
         <% mission.quotations.each do |quotation| %>
             <div class="card-quotation-user-dashboard">
                 <p>Mission <%= mission.description %></p>
                 <p> Specific price: Rs<%= quotation.specific_price %> </p>
                 <p> Description: <%= quotation.handyman_description%> </p>
-                <p> Handyman name: <%= quotation.handyman.user.first_name %> <%= quotation.handyman.user.last_name %> </p>
-            </div>
+                <p> Handyman name: <%= quotation.handyman.user.first_name %> <%= quotation.handyman.user.last_name %> </p>        
+            <div class="card-mission-handyman-button">
+                       <%= link_to "Approve", "#", class:'btn btn-warning' %>
+                       <%= link_to "Decline", dashboard_user_path, class:'btn btn-primary' %>
+                    </div>
+             </div>       
         <% end %>
-         <%= link_to "Decline", class:'btn btn-primary' %>
-        <%= link_to "Accept", class:'btn btn-primary' %>
     <% end %>    
 </div>
 
