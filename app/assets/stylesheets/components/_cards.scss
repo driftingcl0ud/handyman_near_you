@@ -1,5 +1,15 @@
 
-  .card-list {
+  .card .card_image {
+    max-width:100%;
+    width: 30px!important;
+    height: 20px!important;
+    border-radius: 40px;
+    object-fit: cover;
+    padding: 20px;
+  }
+  .cards-list {
+    z-index: 0;
+
     width: 100%;
     border: rgb(247, 149, 64);
 

@@ -28,6 +28,9 @@
                 <h2><strong>Upcoming <span class = "orange"> Missions </span></strong></h2>
                 <% @handyman.missions.each do |mission| %>
                 <div class="card-mission-handyman ">
+                <% if mission.photos.attached? %>
+                  <%= cl_image_tag mission.photos.first.key, height: 300, width: 400, crop: :fill %>
+                <% end %> 
                   <div class="card-mission-handyman-infos">
                     <h2><strong><%= mission.description %></strong></h2>
                     <h3><%= mission.user.first_name %> <%= mission.user.last_name  %></h3>
