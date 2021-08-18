@@ -10,5 +10,6 @@ class PagesController < ApplicationController
 
   def dashboard_user
     @user = current_user
+    @pending_quotations = @user.quotations
   end
 end

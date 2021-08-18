@@ -1,24 +1,68 @@
-<%= content_for(:navbar_class, "navbar-home") %>
+<%#= content_for(:navbar_class, "navbar-home") %>
 
-<%= form_tag handymen_path, method: :get do %>
-        <%= text_field_tag :query,
+<%#= form_tag handymen_path, method: :get do %>
+        <%#= text_field_tag :query,
           params[:query],
           class: "wrap",
           class: "searchBox", type: "text",
           placeholder: "Find a handyman "
         %>
-        <%= submit_tag "Search", class: "searchButton" %>
+        <%#= submit_tag "Search", class: "searchButton" %>
         
-      <% end %>
-<div class="banner">
-    <div class="container text-center">
-        <div class="banner-content ">
-          <h1> Welcome to Handyman near you </h1>
-          <p> What can our home improvement professionals do for you ? </p>         
-          <%= link_to "Get Started", handymen_path, class: "btn btn-lg btn-primary"  %>
+      <%# end %>
+
+<div class="container">
+    <h1 class="tagline"> What can our home<br><span class=orange>improvement<br> professionals</span> do<br> for you ? </h1>
+    <div class="bg-grey">
+        <%= link_to "I'M LOOKING FOR HANDYMAN 💪", handymen_path, class: "btn-orange btn-lg"  %>
+        <p class="grey">i - Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Velit assumenda distinction</p>
+    </div>        
+    <div class="m-5">
+        <h3>A TAILORMAIDE SERVICE</h3>
+        <div class="card-container">
+            <div class="bg-grey d-flex align-self-center">
+                <div class="card-services">
+                  <p class="emoji">🔍</p>
+                  <p class="mt-3">ALL <strong>WORKERS</strong> IN MAURITIUS IN ONE AND SECURE PLACE</p>
+                </div>
+            </div>
+
+            <div class="bg-grey">
+                <div class="card-services">
+                    <p class="emoji">🛠</p>                  
+                    <p>TRUST THE BEST <strong>WORKERS</strong> BASED ON</p> <strong>REVIEWS AND CERTICATION</strong>
+                </div>
+            </div>
+
+            <div class="bg-grey">
+                <div class="card-services">
+                    <p class="emoji">🔏</p>
+                    <p>ALL <strong>WORKERS</strong> IN MAURITIUS IN ONE AND SECURE PLACE</p>
+                </div>
+            </div>
         </div>
     </div>
-
+    <div>
+        <div class="card-container">
+            <h3>They trust qn <br>hqndy man 🤜🤛</h3>
+            <div class="testimonials">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Tempora iste eaque quam quisquam, perspiciatis aperiam? Voluptas esse impedit distinctio exercitationem? Ipsum fuga maxime vitae nostrum possimus dolorem tempora aut cupiditate.</p>
+            </div>
+            <div class="testimonials">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Tempora iste eaque quam quisquam, perspiciatis aperiam? Voluptas esse impedit distinctio exercitationem? Ipsum fuga maxime vitae nostrum possimus dolorem tempora aut cupiditate.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-orange p-5 d-flex">
+        <div>
+            <h3>You are an handy Man</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus blanditiis distinctio ea eos iste quod culpa vero, voluptas assumenda unde. Natus exercitationem corporis.</p>
+            <%= link_to "propose my services", handymen_path, class: "btn-grey btn-lg"  %>
+        </div>
+        <img src="" alt="#">
+    </div>
 </div>
+
+
     
   
