@@ -19,12 +19,17 @@
       <li class="nav-item active navbar-title">
         <%= link_to "Become a Handyman", new_handyman_path %>
       </li>
-      <li class="nav-item active navbar-title">
-        <%= link_to "My Dashboard", dashboard_user_path %>
-      </li>
-      <li class="nav-item active navbar-title">
-        <%= link_to "Handyman Dashboard", dashboard_handyman_path %>
-      </li>
+      <% if current_user %>
+        <% if current_user.handymen.first %>
+          <li class="nav-item active navbar-title">
+            <%= link_to "Handyman Dashboard", dashboard_handyman_path %>
+          </li>
+        <% else %>
+          <li class="nav-item active navbar-title">
+            <%= link_to "My Dashboard", dashboard_user_path %>
+          </li>
+        <% end %>
+      <% end %>
      <% unless current_user %>
         <li class="nav-item active navbar-title">
           <%= link_to "Sign up", new_user_registration_path %>
@@ -37,8 +42,7 @@
       <li class="nav-item dropdown">
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-           <%= link_to "My Dashboard", dashboard_user_path, class: "dropdown-item"%>
-           <%= link_to "My Dashboard", dashboard_user_path, class: "dropdown-item"%>
+           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
         </div>
       </li>
     </ul>
