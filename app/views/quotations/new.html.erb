@@ -17,7 +17,8 @@
             Please write your quotation:
           </p>
           <%= f.text_area :handyman_description, cols: 20, rows: 20 %>
-          <%= link_to "Back to dashboard", dashboard_path,class:'btn btn-light' %>
+          <%= f.hidden_field :status, value: "pending" %>
+          <%= link_to "Back to dashboard", dashboard_user_path, class:'btn btn-light' %>
           <%= f.submit "Send quotation", class:'btn btn-primary' %>
         <% end %>
       </div>
