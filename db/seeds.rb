@@ -42,10 +42,10 @@ missions4 = Mission.new(start_date: Date.new(2009,9,14), user_id: users8.id, des
 missions4.save!
 
 
-
-
-
-
+quotation1 = Quotation.create(handyman_id: handymen1.id, handyman_description: "here is the solution", specific_price: 100.0, mission_id: missions1.id, status: "pending")
+quotation2 = Quotation.create(handyman_id: handymen2.id, handyman_description: "lorem ipsum", specific_price: 200.0, mission_id: missions2.id, status: "pending")
+quotation3 = Quotation.create(handyman_id: handymen3.id, handyman_description: "abcdefgh", specific_price: 300.0, mission_id: missions3.id, status: "pending")
+quotation4 = Quotation.create(handyman_id: handymen4.id, handyman_description: "123456", specific_price: 247.0, mission_id: missions4.id, status: "pending")
 
 
 

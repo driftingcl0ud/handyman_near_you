@@ -5,11 +5,11 @@ class PagesController < ApplicationController
   end
 
   def dashboard_handyman
-    raise
     @handyman = current_user
   end
 
   def dashboard_user
     @user = current_user
+    @pending_quotations = @user.quotations
   end
 end
