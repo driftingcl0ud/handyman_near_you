@@ -7,7 +7,7 @@ class QuotationsController < ApplicationController
     @mission = Mission.find(params[:mission_id])
     @quotation = Quotation.new(quotation_params)
     @quotation.mission = @mission
-    @quotation.handyman_id = current_user.handymen[0].id
+    @quotation.handyman_id = @mission.handyman_id
     @quotation.save!
     @mission.quotations << @quotation
     @mission.save!
