@@ -1,38 +1,39 @@
-<div class="">
- <h1 class= "title"><%= image_tag "decorator.png", height: "50", width: "50" %>
-    Our <span class=orange>Handyman</span> <br>Near You! <%= image_tag "car-service.png", height: "50", width: "50" %> </h1>
+<div class="container">
+ <h1 class= "title"> Our <span class="orange"> Handy Man </span> <br> Near You!  </h1>
   <div>  
-  <div class="search_handyman">
-    <%= form_tag handymen_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "wrapper",
-          class: "label",
-        class: "searchBox", type: "text",
-        placeholder: "Find a handyman "
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %> 
-    <% end %>
+    <div class="search_handyman">
+      <%= form_tag handymen_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "wrapper",
+            class: "label",
+          class: "searchBox", type: "text",
+          placeholder: "Find a handyman "
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %> 
+      <% end %>
+    </div>
+
   </div>
-  </div>
-    </ul>
-   <div class="columns">
-    <ul class="price">
       <% @handymen.each do |handyman| %>
-         <div class="handyman-info">
-            <li class="grey"><%= handyman.user.first_name %> <%= handyman.user.last_name %></li>
-            <li><%= image_tag "mechanic.png", height: "30", width: "30" %><%= handyman.job_title %></li>
-            <!-- <li><%#= image_tag "best-price.png", height: "30", width: "30" %><%#= handyman.average_price %></li> -->
-            <li class="grey"><%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-primary' %></li>
-         </div>
+        <div class="card-index" >
+          <div class="card-body">
+            <%= handyman.user.first_name %> <%= handyman.user.last_name %>
+            <div class="card-job"> <span> 🛠 <%= handyman.job_title %></span> </div>
+            <p> 📍 3km </p>
+          </div>
+         <%= link_to "SEE MORE">, handyman_path(handyman),class:'btn btn-orange' %>
+        </div>
       <% end %>
        
-    </ul>
   </div>
+
+       
+  
 </div>
-  <div id="map"
-    style="height: 100vh;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="pk.eyJ1Ijoia2F2ZWVzaCIsImEiOiJja3Jlazd0c3kxc205MnZxdTd0N2twOXAwIn0.My3-kyt0F3aF2jkksJkxCw">
-  </div>
+      <div id="map"
+        style="height: 100vh;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="pk.eyJ1Ijoia2F2ZWVzaCIsImEiOiJja3Jlazd0c3kxc205MnZxdTd0N2twOXAwIn0.My3-kyt0F3aF2jkksJkxCw">
+      </div>
 
