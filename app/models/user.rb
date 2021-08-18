@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :missions
+  has_many :quotations, through: :missions
   has_many :handymen
 
   validates :first_name,presence: :true

@@ -1,0 +1,32 @@
+<div class="container">
+<h1>Dashboard of <%= @user.first_name %> </h1>
+    <div class = "row">
+     <div class="col-sm-6">
+      <div class="card border-warning mb-3" style="width: 15rem;height: 13rem;">
+        <div class="card-body">
+     <h4><strong><%= @user.missions.count %><strong></h4>  
+    </div>
+        <p>Mission Envoyees</p>
+    </div>
+    </div>
+      </div>
+      <div class="container">
+        <h2><strong>Upcoming Quotation<strong></h2>
+      </div>
+    <div class="card border-warning mb-3">
+    <% @user.missions.each do |mission| %>
+        <% mission.quotations.each do |quotation| %>
+            <div class="card-quotation-user-dashboard">
+                <p>Mission <%= mission.description %></p>
+                <p> Specific price: Rs<%= quotation.specific_price %> </p>
+                <p> Description: <%= quotation.handyman_description%> </p>
+                <p> Handyman name: <%= quotation.handyman.user.first_name %> <%= quotation.handyman.user.last_name %> </p>
+            </div>
+        <% end %>
+         <%= link_to "Decline", class:'btn btn-primary' %>
+        <%= link_to "Accept", class:'btn btn-primary' %>
+    <% end %>    
+</div>
+
+
+        
