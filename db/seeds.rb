@@ -1,5 +1,6 @@
 require 'date'
 #create seed for user and handyman
+Quotation.destroy_all
 Mission.destroy_all
 Handyman.destroy_all
 User.destroy_all
