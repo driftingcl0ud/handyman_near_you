@@ -34,7 +34,27 @@
                     <p> Price: Rs<%= quotation.specific_price %> </p>      
                   </div>                  
                     <div class="card-mission-user-button">
-                      <%= link_to "Accept", "#", class:'btn btn-orange m-4' %>
+                      <button type="button" class="btn btn-orange m-4" data-toggle="modal" data-target="#staticBackdrop">
+                        Accept
+                      </button>
+                      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h2 class="modal-title" id="staticBackdropLabel">Congratulations!</h2>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <h3>Your Handyman is on the way!</h3>
+                            </div>
+                            <div class="modal-footer">
+                              <%= link_to "Understood", root_path,class:'btn btn-orange m-4' %>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <%= link_to "Decline", "#",class:'btn btn-grey m-4' %>
                     </div>  
                 </div>
