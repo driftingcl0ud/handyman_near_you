@@ -1,25 +1,22 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-12 col-sm-4">
-      <h2 class="mission-title"><%= image_tag "description.png", height: "30", width: "30" %>Describe your mission</h2>
+    <div class="col-12 col-sm-6">
+      <h2 class="mission-title"> 📝 Describe your mission</h2>
 
       <div class="form-inputs label-none">
 
         <%= simple_form_for @mission, url: handyman_missions_path do |f| %>
-        <p class="starting-date">
-
-          Please put your starting date:
-
+        <p class="starting-date" id="p-mission">
+          Please select the date for your mission:
         </p>
           <%= f.input :start_date %>
-          <p class="description">
+          <p class="description" id="p-mission">
             Please describe your mission so we can help you more:
           </p>
-          <%= f.text_area :description, cols: 20, rows: 20 %>
-
+          <%= f.text_area :description, cols: 60, rows: 10 %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= link_to "Back to Handymen List", handymen_path, class:'btn btn-decline' %>
           <%= f.button :submit, "Request to the quotation", class:'btn btn-orange' %>
-          <%= link_to "Back to handymen list", handymen_path, class:'btn btn-light' %>
         <% end %>
       </div>
     </div>
