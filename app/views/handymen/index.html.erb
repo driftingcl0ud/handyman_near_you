@@ -1,5 +1,5 @@
 <div class="container">
- <h1 class= "title"> Our <span class="orange"> Handy Man </span> <br> Near You!  </h1>
+ <h1 class= "title"> Our <span class="orange"> Handy Man </span> <br> near You!  </h1>
   <div>  
     <div class="search_handyman">
       <%= form_tag handymen_path, method: :get do %>
@@ -24,16 +24,16 @@
           </div>
          <%= link_to "SEE MORE", handyman_path(handyman),class:'btn btn-orange' %>
         </div>
-      <% end %>
-       
+      <% end %>   
+       </div>
+        <div id="map"
+          style="height: 100vh;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="pk.eyJ1Ijoia2F2ZWVzaCIsImEiOiJja3Jlazd0c3kxc205MnZxdTd0N2twOXAwIn0.My3-kyt0F3aF2jkksJkxCw">
+      </div>
+
   </div>
 
        
   
-</div>
-      <div id="map"
-        style="height: 100vh;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="pk.eyJ1Ijoia2F2ZWVzaCIsImEiOiJja3Jlazd0c3kxc205MnZxdTd0N2twOXAwIn0.My3-kyt0F3aF2jkksJkxCw">
-      </div>
 

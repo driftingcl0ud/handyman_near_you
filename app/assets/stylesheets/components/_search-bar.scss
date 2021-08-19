@@ -1,5 +1,5 @@
 .wrapper {
-    width: 100%;
+    width: 70%;
     max-width: 31.25rem;
     margin: 6rem auto;
     margin: 0px;
@@ -7,8 +7,13 @@
   }
   
   .search_handyman {
-    width: 60%;
-    padding: 30px;
-    padding-right: 30px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
     right: 30px;
   }
+
+.searchBox {
+  width: 357px;
+  padding: 11px;
+}
