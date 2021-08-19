@@ -1,3 +1,60 @@
 <div class="container">
+<<<<<<< HEAD
 hello
+=======
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <%= image_tag "electrician-1.jpg" %>
+	    </div>
+	    <div class="carousel-item">
+	      <%= image_tag "electrician-2.jpg" %>
+	    </div>
+	    <div class="carousel-item">
+	      <%= image_tag "electrician-3.jpg"%>
+	    </div>
+	  </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+</div>
+
+<div class="container cv-card">
+	<div class="profile-id">
+	  <div class="profile-img"></div>
+	  <h2 class="name"><%= @handyman.user.first_name %> <%= @handyman.user.last_name %></h2>
+	  <div class="description">
+	  	<h3><%= @handyman.job_title %> </h3>
+	    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat esse aliquid sit voluptates perferendis iure reiciendis labore voluptatum est. Laudantium fugit accusantium voluptates, ipsa ut commodi ea maiores illo alias.
+	  </div>
+	  <div class="region">
+	    <%= image_tag "placeholder.png", height: "30", width: "30" %><a>Port-Louis</a>
+	    <a>Beau Bassin</a>
+	    <a>Rose-Hill</a>
+	  </div>
+	  <footer>
+	    <div class="likes">
+	    <i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>
+	    <p>Rating: 1.5K <p>
+	    </div>
+	    <div class="Mission">
+	     <%= image_tag "worker.png", height: "30", width: "30" %><a>Mission: 154</a>
+	    </div>
+	    <%= link_to "Back to list", handymen_path,class:'btn btn-grey m-4' %>
+	    <%= link_to "Create a Mission", new_handyman_mission_path(@handyman), class:'btn btn-orange m-4' %>
+	  
+	  </footer>
+	</div>
+>>>>>>> master
 </div>
