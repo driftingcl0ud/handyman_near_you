@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #F2F2F2;
+  background: rgb(238, 126, 15);
   align-items: center;
 
 }
@@ -18,7 +18,7 @@
   margin-top: 10px;
   margin-right: 10px;
   a {
-    color: black;
+    color: white;
   }
 }
 
@@ -29,4 +29,7 @@
   widows: 60px;
 
   }
+}
+.container-navy {
+  margin-top: 60px;
 }

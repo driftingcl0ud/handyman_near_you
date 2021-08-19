@@ -1,48 +1,47 @@
 .cards-list {
-    z-index: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 300px;
-  }
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 300px;
+}
+  
+.card .card_image {
+  max-width:100%;
+  width: 30px!important;
+  height: 20px!important;
+  border-radius: 40px;
+  object-fit: cover;
+}
   
  
-  .card .card_image {
-    max-width:100%;
-    width: 30px!important;
-    height: 20px!important;
-    border-radius: 40px;
-    object-fit: cover;
-  }
   
- 
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
   
-  .card .card_title {
-    text-align: center;
-    border-radius: 0px 0px 40px 40px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: -80px;
-    height: 40px;
-  }
-  
-  .title-white {
-    color: white;
-  }
-  
-  .title-black {
-    color: white;
-  }
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: white;
+}
   
 
-  @media all and (max-width: 500px) {
-    .card-list {
-      /* On small screens, we are no longer using row direction but column */
-      flex-direction: column;
-    }
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
   }
+}
 
 #box-home {
   width: 80%;
@@ -70,3 +69,6 @@
     font-family: 'Roboto', Arial, sans-serif;
   }
   
+.navbar {
+  margin-bottom: 50px;
+}

@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>Dashboard of <%= @user.first_name %> </h1>
+  <h2>Dashboard of <%= @user.first_name %> </h2>
     <div class = "row">
      <div class="col-sm-6">
       <div class="card border-warning mb-3" style="width: 15rem;height: 13rem;">
         <div class="card-body">
-        <h4><strong><%= @user.missions.count %><strong></h4>  
+        <h2><%= @user.missions.count %></h2>  
           </div>
               <p>Mission Envoyees</p>
           </div>
@@ -12,7 +12,7 @@
       </div>
     </div>
       <div class="container">
-        <h2><strong>Upcoming Quotation<strong></h2>
+        <h2>Upcoming Quotation</h2>
       </div>
     <div class="card-list-dashboard">
       <% @user.missions.each do |mission| %>            
