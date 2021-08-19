@@ -1,0 +1,42 @@
+.bg-image {
+    background-image: url(asset-path("show.jpg"));
+    height: 400px;
+  }
+  .container-body{
+      border: 2px solid rgb(238, 126, 15);
+      padding-top: 25px;
+  }
+  .name{
+      text-align: center;
+  }
+
+  .container-job{
+    border: 1px solid rgb(238, 126, 15);
+    width: 7rem;
+    border-radius: 5px;
+    padding-left: 8px
+}
+.big-box {
+    display: flex;
+    margin-top:45px;
+    padding-bottom: 30px;
+}
+.description {
+    margin-right: 40px;
+    width:47vw;
+    margin-left: 44px;
+    margin-top: 25px;
+}
+.image {
+    width:30vw;
+}
+.small-image-show{
+    width:48%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.large-image-show{
+    width:100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
