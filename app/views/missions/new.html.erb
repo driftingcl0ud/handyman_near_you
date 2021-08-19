@@ -1,27 +1,30 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-6">
-      <h2 class="mission-title"> 📝 Describe your mission</h2>
-
-      <div class="form-inputs label-none">
-
-        <%= simple_form_for @mission, url: handyman_missions_path do |f| %>
-        <p class="starting-date" id="p-mission">
-          Please select the date for your mission:
-        </p>
-          <%= f.input :start_date %>
-          <p class="description" id="p-mission">
-            Please describe your mission so we can help you more:
-          </p>
-          <%= f.text_area :description, cols: 60, rows: 10 %>
-          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          <%= link_to "Back to Handymen List", handymen_path, class:'btn btn-decline' %>
-          <%= f.button :submit, "Request to the quotation", class:'btn btn-orange' %>
-        <% end %>
+<div class="container-form">
+  <div class="card-quotations">
+    <div class="container quotation-form">
+      <div class="justify-content-center">
+        <div class="col-lg-8">
+          <div class="form-inputs label-none">
+          <h2> 📝 Describe your mission</h2>
+             <%= simple_form_for @mission, url: handyman_missions_path do |f| %>
+            <p class="starting-date" id="p-mission">
+              Please select the date for your mission:
+            </p>
+              <%= f.input :start_date %>
+              <p class="description" id="p-mission">
+                Please describe your mission so we can help you more:
+              </p>
+              <%= f.text_area :description, cols: 92, rows: 15 %>
+              <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+              <%= link_to "Back to Handymen List", handymen_path, class:'btn btn-grey m-4' %>
+              <%= f.button :submit, "Request to the quotation", class:'btn btn-orange' %>
+            <% end %>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="background-color-orange">
     </div>
   </div>
 </div>
-
 
 
