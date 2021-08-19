@@ -8,7 +8,7 @@
 	   <div class="d-flex justify-content-center"><div class="container-job"> <span> 🛠 <%= @handyman.job_title %></span> </div></div>
 		<div class="big-box">
 			<div class="description ">
-				<p> Talented handyman with 7+ years of experience, skilled in light carpentry, plumbing, and electrical. Seeking position with Blue Egg Property Management. At PRPQ Partners, maintained 11 buildings with 10+ apartment units each. Handled light carpentry, electrical, and plumbing work and resolved an average of 30 resident issues per week. Received positive comments from 95% of residents and managers</p>
+				<p><%= @handyman.description %></p>
 				<p> 📍 <%= @handyman.user.address %> </p>
 				<p> ✅  Missions Completed : <strong><%=  @handyman.user.mission_ids.count %></strong> </p>
 				<p> ⭐️ Ratings : <strong> 5/5 </strong>

@@ -43,7 +43,7 @@ class HandymenController < ApplicationController
 
 private
 def handyman_params
-    params.require(:handyman).permit(:user_id, :average_price, :job_title, :availability, :address, photos:[])
+    params.require(:handyman).permit(:user_id, :average_price, :job_title, :availability, :address, :description, photos:[])
 end
 
 end
