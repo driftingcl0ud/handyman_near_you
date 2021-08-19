@@ -8,8 +8,9 @@ User.destroy_all
 
 puts "start seed"
 
-users1 = User.create(first_name: 'Kaveesh', last_name: 'Sinopharm', email:'kaveesh@yahoo.com', password: "123456", address:"Royal road curepipe" )
-users1.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/ass.jpg')), filename: 'ass.jpg')
+users1 = User.new(first_name: 'Kaveesh', last_name: 'Sinopharm', email:'kaveesh@yahoo.com', password: "123456", address:"Royal road curepipe" )
+users1.photo.attach(io: File.open(Rails.root.join('app/assets/images/boy.png')), filename: 'boy.png')
+users1.save!
 users2 = User.create(first_name: 'Priyanka', last_name: 'Kallee', email:'kallee@hotmail.com', password: "123456", address:"Flic en Flac" )
 users2.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
 users3 = User.create(first_name: 'Drifting', last_name: 'Cloud', email:'cloud@yahoo.com', password: "123456", address:"Beau Bassin" )
