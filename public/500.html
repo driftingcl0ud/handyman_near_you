@@ -4,63 +4,327 @@
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  *{
+  box-sizing: border-box;
+}
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+body{
+  color: #1F1E1F;
+  background-color: #f3b861;
+  font-family: Sans-Serif;
+  text-align: center;
+}
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+#container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+.server{    
+  height: 40vw;
+  width: 24vw;
+  border-radius: 1vw;
+  background-color: #302F30;
+  padding: 3vw 2vw;
+  margin: 1vw;
+  box-shadow: 1vw .5vw .2vw #F9A540;
+}
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+.hdd-container{  
+  padding: 0;
+}
+
+.hdd{
+  height: 4vw;
+  width: 100%;
+  margin-bottom: 1vw;
+  background-color: #141414;
+  border-radius: .5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.led{
+  height: .8vw; 
+  width: .8vw;
+  border-radius: 50%;
+  background-color: rgba(0, 255, 0, 0.4);
+  margin: .5vw;
+  box-shadow: 0px 1px 10px rgba(0, 255, 0); 
+}
+
+.red-led{
+  background-color: rgba(255, 0, 0, 0.5);
+box-shadow: 0 1px 5px rgba(255, 0, 0);  
+animation: blinking 1s linear infinite;      
+}
+
+.cooling-system{
+  padding-top: .5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.grid{
+  background-color: #141414;
+  width: 8vw; 
+  height: 9vw;
+  margin: .4vw;
+  border-radius: .8vw
+}
+
+
+
+h1{ 
+  font-family: 'Lobster', cursive;
+  font-weight: lighter; 
+}
+
+#error{
+  font-size: 1.2em
+}
+
+h1, p{
+  margin: 10px;
+}
+
+@keyframes blinking{
+  from {opacity: 1;}
+  to {opacity: 0}
+  
+}
   </style>
 </head>
 
 <body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+<h1>Oh No!</h1>
+<p id="error">Internal Server Error</p>
+<p id="explanation">Something's wrong, maybe the rise of the machines has begun...<br> Or, more likely, a distracted developer left a bug in his code.</p>
+<p>If you are the application owner check the logs for more information</p>
+<div id="container">
+  <div class="server" id="server1">
+    <div class="hdd-container">
+      <div class="hdd">
+        <div class="led green-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led green-led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <div class="cooling-system">
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>      
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+    </div>
   </div>
+  <div class="server" id="server2">
+    <div class="hdd-container">
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led "></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+    </div>
+    <div class="cooling-system">
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+    </div>
+  </div>
+  <div class="server" id="server3">
+    <div class="hdd-container">
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+      <div class="hdd">
+        <div class="led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led red-led"></div>
+        <div class="led"></div>
+      </div>
+    </div>
+    <div class="cooling-system">
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
