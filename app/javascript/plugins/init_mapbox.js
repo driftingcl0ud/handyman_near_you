@@ -10,7 +10,7 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/kaveesh/cksimfv2910qm18luybfqhfxo'
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     fitMapToMarkers(map, markers);
