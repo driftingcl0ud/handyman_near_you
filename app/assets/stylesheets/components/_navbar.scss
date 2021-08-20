@@ -24,6 +24,9 @@
 
 .logo-navbar {
   margin-left: 10px;
+  background-color: white;
+  border-radius: 100%;
+  padding: 7px;
  a {
   height: 60px;
   widows: 60px;
@@ -32,4 +35,12 @@
 }
 .container-navy {
   margin-top: 60px;
+}
+.nav-item {
+  color: white;
+}
+.navy {
+  margin-right: 760px;
+  margin-top: -2.5px;
+  margin-left: 5px;
 }
