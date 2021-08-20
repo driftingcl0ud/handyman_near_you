@@ -9,10 +9,10 @@ User.destroy_all
 puts "start seed"
 
 users1 = User.new(first_name: 'Kaveesh', last_name: 'Sunassee', email:'kaveesh@yahoo.com', password: "123456", address:"21 Labourdonnais St, Port Louis, Mauritius" )
-users1.photo.attach(io: File.open(Rails.root.join('app/assets/images/electrician-profile-01.jpg')), filename: 'electrician-profile-01.jpg')
+users1.photo.attach(io: File.open(Rails.root.join('app/assets/images/profile-picture-1.jpg')), filename: 'profile-picture-1.jpg')
 users1.save!
-users2 = User.create(first_name: 'Gael', last_name: 'Lamothe', email:'gael@yahoo.com', password: "123456", address:"Royal Road Trois Boutiques, Triolet 21509, Mauritius" )
-users2.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/profile-picture-1.jpg')), filename: 'profile-picture-1.jpg')
+users2 = User.create(first_name: 'Gael', last_name: 'Lamothe', email:'gael@yahoo.com', password: "123456", address:"21 Labourdonnais St, Port Louis, Mauritius" )
+users2.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/electrician-profile-01.jpg')), filename: 'electrician-profile-01.jpg')
 users3 = User.create(first_name: 'Priyanka', last_name: 'Kallee', email:'kallee@yahoo.com', password: "123456", address:"Mont Oreb Lane Pereybere, Mauritius" )
 users3.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/boy.png')), filename: 'boy.png')
 users4 = User.create(first_name: 'Jean Claude', last_name: 'Barthélemy', email:'jclaude@yahoo.com', password: "123456", address:"Royal road Cap Malhereux, Mauritius" )
@@ -41,7 +41,7 @@ users13 = User.create(first_name: 'Marc', last_name: 'Jacobs', email:'marc@yahoo
 users13.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'boy.png')
 
 
-handymen1 = Handyman.create(job_title: 'Plumber', average_price: '500',availability: true, user_id: users1.id, address: '21 Labourdonnais St, Port Louis, Mauritius', description: 'Talented handyman with 7+ years of experience, skilled in light carpentry, plumbing, and electrical. Seeking position with Blue Egg Property Management. At PRPQ Partners, maintained 11 buildings with 10+ apartment units each. Handled light carpentry, electrical, and plumbing work and resolved an average of 30 resident issues per week. Received positive comments from 95% of residents and managers')
+handymen1 = Handyman.create(job_title: 'Electrician', average_price: '500',availability: true, user_id: users1.id, address: '21 Labourdonnais St, Port Louis, Mauritius', description: 'Followed class at the IVTB of ebene gratuated in 2009 and work of a company in the city center.')
 handymen2 = Handyman.create(job_title: 'Electrician', average_price: '250',availability: true, user_id: users2.id, address: 'Royal Road Trois Boutiques, Triolet 21509, Mauritius', description:'Handyman with more than 8 years experience conducting repairs on residential homes, apartments and offices. Skills include plumbing, masonry, painting, carpentry, electrical works and limited troubleshooting for air conditioning systems. I have knowledge on using MS Word, Excel and have a valid driver’s license. I hope to be considered for the job of Handyman at Brookestone Condominiums.')
 handymen3 = Handyman.create(job_title: 'Gardener', average_price: '250',availability: true, user_id: users3.id, address: 'Mont Oreb Lane Pereybere, Mauritius', description:'Garderner in a famous hotel in the north of island. With more than 5years of experience. I use to do landscaping for big companies during my day off with some friends. Followed courses with Pierre de la Jardiner with is the Meilleur Ouvrier de France 2011 of Garderner')
 handymen4 = Handyman.create(job_title: 'Carpenter', average_price: '250',availability: true, user_id: users4.id, address: 'Royal road Baie du Cap, Mauritius', description:'Self employee with 6 years of experience in the field of wood. Used to work for a big companies but now decided to work for myself. Alots of custmers are very happy with my job.')
@@ -51,7 +51,7 @@ handymen7 = Handyman.create(job_title: 'Mécanicien', average_price: '1250',avai
 handymen8 = Handyman.create(job_title: 'Air Conditioner Technician', average_price: '1250',availability: true, user_id: users8.id, address: 'A6, Rivière du Rempart, Mauritius', description:'Air conditioner have no more secret for me. Work for myself since last year due to covid. ')
 handymen9 = Handyman.create(job_title: 'Electrician', average_price: '1250',availability: true, user_id: users9.id, address: 'New road Roches noires, Roches Noires 31206, Mauritius', description:'Followed class at the IVTB of ebene gratuated in 2009 and work of a company in the city center.')
 handymen10 = Handyman.create(job_title: 'Electrician', average_price: '1250',availability: true, user_id: users10.id, address: '176，royal road beau bassin MU, 71401, Mauritius', description:'I can work in Beau Bassin, Rose Hill, Port Louis very happy to help people I can be accessible mostly 7/7.')
-handymen11 = Handyman.create(job_title: 'Plumber', average_price: '1250',availability: true, user_id: users11.id, address: 'Avenue Remy Ollier, Quatre Bornes, Mauritius', description:'Plumber in the region Quatre Bornes, Rose-Hill and Beau Bassin. Work for some prject like Bagatelle and La Croissette.')
+handymen11 = Handyman.create(job_title: 'Electrician', average_price: '1250',availability: true, user_id: users11.id, address: 'Avenue Remy Ollier, Quatre Bornes, Mauritius', description:'Plumber in the region Quatre Bornes, Rose-Hill and Beau Bassin. Work for some prject like Bagatelle and La Croissette.')
 handymen12 = Handyman.create(job_title: 'Mécanicien', average_price: '1250',availability: true, user_id: users12.id, address: 'Georges Guibert St, Vacoas-Phoenix, Mauritius', description:'BMW, Mercedes Benz or Jaquar don\'t have any secret for me anymore')
 
 
