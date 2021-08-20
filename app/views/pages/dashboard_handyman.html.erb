@@ -6,7 +6,7 @@
   </div>
     
     <div class = "row">
-     <div class="col-sm-6">
+     <div class="mr-3">
       <div class="card border-warning mb-3" style="width: 15rem;height: 13rem;">
         <div class="card-body">
           <h5><strong><span class = "orange">110</span></strong></h5>
@@ -16,7 +16,7 @@
      </div>
      
 
-     <div class="col-sm-6">
+     <div class="">
       <div class="card border-warning mb-3" style="width: 15rem;height: 13rem;">
         <div class="card-body">
           <h5><span class = "orange">4.5/5</span></h5>
@@ -37,8 +37,8 @@
                     <h4> <%= mission.user.address %></h4>
                   </div>
                     <div class="card-mission-handyman-button">
-                       <%= link_to "Approuve", new_mission_quotation_path(mission), class:'btn btn-orange m-4' %>
-                       <%= link_to "Decline", quotation_path(mission),class:'btn btn-grey m-4' %>
+                       <%= link_to "Approuve", new_mission_quotation_path(mission), class:'btn btn-orange custom-btn' %>
+                       <%= link_to "Decline", quotation_path(mission),class:'btn btn-grey custom-btn' %>
                     </div>
 
                   

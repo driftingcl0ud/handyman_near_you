@@ -11,7 +11,7 @@
   
   .card-mission-handyman img {
     height: 100%;
-    width: 120px;
+    width: 280px;
     object-fit: cover;
   }
   
@@ -37,3 +37,9 @@
     display:flex;
     flex-direction: column;
   }
+
+.custom-btn {
+  margin-bottom: 15px;
+  width: 150px;
+}
+  

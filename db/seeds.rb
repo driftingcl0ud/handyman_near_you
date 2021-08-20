@@ -19,7 +19,7 @@ users4 = User.create(first_name: 'Lila', last_name: 'Obama', email:'lila@yahoo.c
 users4.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/ass.jpg')), filename: 'ass.jpg')
 users5 = User.create(first_name: 'Sanjay', last_name: 'Pfizer', email:'pfizer@yahoo.com', password: "123456", address:"Royal road Baie du Cap" )
 users5.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
-users6 = User.create(first_name: 'Barck', last_name: 'Obama', email:'obama@yahoo.com', password: "123456", address:"Flower Road Gris Gris" )
+users6 = User.create(first_name: 'Barack', last_name: 'Obama', email:'obama@yahoo.com', password: "123456", address:"Flower Road Gris Gris" )
 users6.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
 users7 = User.create(first_name: 'Petit', last_name: 'Chat', email:'chat@yahoo.com', password: "123456", address:"Grand Riviere" )
 users7.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')

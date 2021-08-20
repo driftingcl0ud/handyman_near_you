@@ -1,10 +1,13 @@
 .bg-image {
     background-image: url(asset-path("show.jpg"));
     height: 400px;
+    position: relative;
   }
   .container-body{
       border: 2px solid rgb(238, 126, 15);
       padding-top: 25px;
+      position: relative;
+      background: #FCFBFB;
   }
   .name{
       text-align: center;
@@ -39,4 +42,19 @@
     width:100%;
     object-fit: cover;
     margin-bottom: 10px;
+}
+.photo{
+    width: 110px;
+    background-color: black;
+    height: 110px;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    background-position: center;
+    background-size: cover;
+    transform: translateX(-50%);
+    
+}
+.big-body{
+    margin-top: -100px;
 }
