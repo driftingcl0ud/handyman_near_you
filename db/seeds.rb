@@ -8,22 +8,28 @@ User.destroy_all
 
 puts "start seed"
 
-users1 = User.new(first_name: 'Kaveesh', last_name: 'Sinopharm', email:'kaveesh@yahoo.com', password: "123456", address:"Royal road curepipe" )
+users1 = User.new(first_name: 'Kaveesh', last_name: 'Sunassee', email:'kaveesh@yahoo.com', password: "123456", address:"21 Labourdonnais St, Port Louis, Mauritius" )
 users1.photo.attach(io: File.open(Rails.root.join('app/assets/images/boy.png')), filename: 'boy.png')
 users1.save!
-users2 = User.create(first_name: 'Priyanka', last_name: 'Kallee', email:'kallee@hotmail.com', password: "123456", address:"Flic en Flac" )
+users2 = User.create(first_name: 'Priyanka', last_name: 'Kallee', email:'kallee@yahoo.com', password: "123456", address:"Royal Road Trois Boutiques, Triolet 21509, Mauritius" )
 users2.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
-users3 = User.create(first_name: 'Drifting', last_name: 'Cloud', email:'cloud@yahoo.com', password: "123456", address:"Beau Bassin" )
+users3 = User.create(first_name: 'Gael', last_name: 'Lamothe', email:'cloud@yahoo.com', password: "123456", address:"Mont Oreb Lane Pereybere, Mauritius" )
 users3.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/boy.png')), filename: 'boy.png')
-users4 = User.create(first_name: 'Lila', last_name: 'Obama', email:'lila@yahoo.com', password: "123456", address:"Royal road Cap Malhereux" )
+users4 = User.create(first_name: 'Jean Claude', last_name: 'Barthélemy', email:'jclaude@yahoo.com', password: "123456", address:"Royal road Cap Malhereux" )
 users4.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/ass.jpg')), filename: 'ass.jpg')
-users5 = User.create(first_name: 'Sanjay', last_name: 'Pfizer', email:'pfizer@yahoo.com', password: "123456", address:"Royal road Baie du Cap" )
+users5 = User.create(first_name: 'Sanjay', last_name: 'Gupta', email:'sanjay@yahoo.com', password: "123456", address:"Royal road Baie du Cap" )
 users5.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
-users6 = User.create(first_name: 'Barck', last_name: 'Obama', email:'obama@yahoo.com', password: "123456", address:"Flower Road Gris Gris" )
+users6 = User.create(first_name: 'Dev', last_name: 'Patel', email:'dev@yahoo.com', password: "123456", address:"Union Delcourt Street, Saint-Francois, Calodyne, Mauritius" )
 users6.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
-users7 = User.create(first_name: 'Petit', last_name: 'Chat', email:'chat@yahoo.com', password: "123456", address:"Grand Riviere" )
+users7 = User.create(first_name: 'David', last_name: 'Smith', email:'david@yahoo.com', password: "123456", address:"St Geran Street, Poudre d'Or, Mauritius" )
 users7.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
-users8 = User.create(first_name: 'Rose', last_name: 'Marie', email:'Marie@yahoo.com', password: "123456", address:"Tamarin Waterfalls" )
+users8 = User.create(first_name: 'Kim', last_name: 'Sullivan', email:'kim@yahoo.com', password: "123456", address:"A6, Rivière du Rempart, Mauritius" )
+users8.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
+users9 = User.create(first_name: 'Jordan', last_name: 'Bredford', email:'jordan@yahoo.com', password: "123456", address:"A6, Rivière du Rempart, Mauritius" )
+users9.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
+users8 = User.create(first_name: 'Arnold', last_name: 'Palmer', email:'arnold@yahoo.com', password: "123456", address:"New road Roches noires, Roches Noires 31206, Mauritius" )
+users8.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
+users8 = User.create(first_name: 'Kim', last_name: 'Sullivan', email:'kim@yahoo.com', password: "123456", address:"A6, Rivière du Rempart, Mauritius" )
 users8.photo.attach(io: File.open(File.join(Rails.root,'app/assets/images/girl.png')), filename: 'girl.png')
 
 
