@@ -1,17 +1,16 @@
-<div class="container">
+<div class="container mt-4">
   <h2>Dashboard of <%= @user.first_name %> </h2>
     <div class = "row">
      <div class="col-sm-6">
-      <div class="card border-warning mb-3" style="width: 15rem;height: 13rem;">
-        <div class="card-body">
-        <h2><%= @user.missions.count %></h2>  
-          </div>
-              <p>Mission Envoyees</p>
+      <div class="mission-send card border-warning mb-3" style="width: 15rem;height: 13rem;">
+        <div class="card-body"> 
+         <h2><%= @user.missions.count %></h2>
+          <p>Mission send</p>
           </div>
         </div>
       </div>
     </div>
-      <div class="container">
+      <div class="container mt-3 mb-3">
         <h2>Upcoming Quotation</h2>
       </div>
     <div class="card-list-dashboard">
@@ -60,9 +59,5 @@
                 </div>
             </div>        
         <% end %> 
-      <% end %>  
-    </div>            
+      <% end %>            
 </div>
-
-
-        
