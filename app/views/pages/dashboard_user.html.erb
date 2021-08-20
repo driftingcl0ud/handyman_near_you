@@ -1,18 +1,17 @@
 <div class="container mt-4">
   <h2>Dashboard of <%= @user.first_name %> </h2>
-    <div class = "row">
-     <div class="col-sm-6">
+  <div class = "row">
+    <div class="col-sm-6">
       <div class="mission-send card border-warning mb-3" style="width: 15rem;height: 13rem;">
         <div class="card-body"> 
-         <h2><%= @user.missions.count %></h2>
+          <h2><%= @user.missions.count %></h2>
           <p>Mission send</p>
-          </div>
         </div>
       </div>
     </div>
-      <div class="container mt-3 mb-3">
-        <h2>Upcoming Quotation</h2>
-      </div>
+    <div class="container mt-3 mb-3">
+      <h2>Upcoming Quotation</h2>
+    </div>
     <div class="card-list-dashboard">
       <% @user.missions.each do |mission| %>            
         <% mission.quotations.each do |quotation| %>
@@ -25,39 +24,42 @@
                 </div> 
                 <p>Lorem ipsum description de la mission, truncate 3 ligne </p>    
               </div>    
-            <div class="card-quotation-information ">     
-                  <div class="card-quotation-user-dashboard">
-                    <p> Handyman name: <%= quotation.handyman.user.first_name %> <%= quotation.handyman.user.last_name %> </p>  
-                    <p> Description: <%= quotation.handyman_description%> </p>
-                    <p>Mission <%= mission.description %></p>
-                    <p> Price: Rs<%= quotation.specific_price %> </p>      
-                  </div>                  
-                    <div class="card-mission-user-button">
-                      <button type="button" class="btn btn-orange m-4" data-toggle="modal" data-target="#staticBackdrop">
-                        Accept
-                      </button>
-                      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h2 class="modal-title" id="staticBackdropLabel">Congratulations!</h2>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <h3>Your Handyman is on the way!</h3>
-                            </div>
-                            <div class="modal-footer">
-                              <%= link_to "Understood", root_path,class:'btn btn-orange m-4' %>
-                            </div>
-                          </div>
+              <div class="card-quotation-information ">     
+                <div class="card-quotation-user-dashboard">
+                  <p> Handyman name: <%= quotation.handyman.user.first_name %> <%= quotation.handyman.user.last_name %> </p>  
+                  <p> Description: <%= quotation.handyman_description%> </p>
+                  <p>Mission <%= mission.description %></p>
+                  <p> Price: Rs<%= quotation.specific_price %> </p>      
+                </div>                  
+                <div class="card-mission-user-button">
+                  <button type="button" class="btn btn-orange m-4" data-toggle="modal" data-target="#staticBackdrop">
+                    Accept
+                  </button>
+                  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h2 class="modal-title" id="staticBackdropLabel">Congratulations!</h2>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <h3>Your Handyman is on the way!</h3>
+                        </div>
+                        <div class="modal-footer">
+                          <%= link_to "Understood", root_path,class:'btn btn-orange m-4' %>
                         </div>
                       </div>
-                      <%= link_to "Decline", "#",class:'btn btn-grey m-4' %>
-                    </div>  
+                    </div>
+                    <%= link_to "Decline", "#",class:'btn btn-grey m-4' %>
+                  </div>  
                 </div>
-            </div>        
+              </div>
+            </div> 
+          </div>       
         <% end %> 
-      <% end %>            
+      <% end %>  
+    </div>
+  </div>          
 </div>
