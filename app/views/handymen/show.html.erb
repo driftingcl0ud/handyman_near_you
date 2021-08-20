@@ -3,8 +3,9 @@
 <div class="bg-image"></div>
 	<div class="big-body">
 	<div class="container-body">  
+	<% if @handyman.user.photo.attached? %>
 	  <div class="photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @handyman.user.photo.key, crop: :fill %>')"></div>
-    
+    <% end %>
 	  <h1 class="name mt-5"><%= @handyman.user.first_name %> <%= @handyman.user.last_name %></h2>
 	   <div class="d-flex justify-content-center"><div class="container-job"> <span> 🛠 <%= @handyman.job_title %></span> </div></div>
 		<div class="big-box">

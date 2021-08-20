@@ -19,33 +19,6 @@
                   <%= f.button :submit, "Submit your form", class:'btn btn-orange m-4' %>
                 <% end %>
               </div>
-
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-4">
-      <h2 class="mission-title"><%= image_tag "description.png", height: "30", width: "30" %>Become a Handyman!</h2>
-
-      <div class="form-inputs label-none">
-        <%= simple_form_for @handyman do |f| %>
-
-       
-        	<p class="Job title">
-            Your job title
-          </p>
-          <%= f.input :job_title, placeholder: "Electrian" %>
-          	<p class="address">Insert your address:</p>
-          <%= f.input :address, placeholder: "21 rue de Labourdonnais, Port Louis Mauritius" %>
-          	<p class="address">Insert photos of your work:</p>
-            <%= f.input :description, placeholder: "description" %>
-          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-
-
-
-
-        
-          <%= link_to "Back to homepage", root_path,class:'btn btn-light' %>
-          <%= f.button :submit, "Submit your form", class:'btn btn-success' %>
-        <% end %>
-
       </div>
     </div>          
    </div>
